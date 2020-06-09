@@ -85,7 +85,7 @@ SCSFExport scsf_DailyStandardDevs(SCStudyInterfaceRef sc)
 	//Calculating Standard Deviation
 	float dev = (sc.Input[1].GetFloat()/ sqrt(252.00)) * sc.Input[0].GetFloat();
 			
-	//Plotting D
+	//Plotting Deviations
 	sc.Subgraph[0][sc.Index] = sc.Input[0].GetFloat() + 3.0 * dev;
 	sc.Subgraph[1][sc.Index] = sc.Input[0].GetFloat() + 2.5 * dev;
 	sc.Subgraph[2][sc.Index] = sc.Input[0].GetFloat() + 2.0 * dev;
